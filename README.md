@@ -1,46 +1,85 @@
 # MediTrack-Hospital-Operations-Analysis
-A Power BI healthcare analytics project transforming a flat-file dataset into a scalable star-schema data model to track hospital KPIs and patient outcomes
+A healthcare analytics project built in Power BI that transforms raw operational data into a scalable star-schema model, enabling KPI tracking across hospitals and improving visibility into patient outcomes, efficiency, and financial performance.
+
 # Project Overview
+MediTrack Global Health is an international healthcare provider operating across 10 countries, delivering services such as patient care, diagnostics, and treatment.
 
-MediTrack Global Health is an international healthcare organization modeled after the UK's National Health Service (NHS). It operates hospitals and medical centers across ten countries, providing a wide range of services including patient care, consultations, diagnostics, and treatments.
-Problem Statement
-Previously, MediTrack’s operational data was stored in a single flat file that combined patient details, doctor information, hospital data, and financial records. As the organization grew across 10 countries, this flat file became inefficient, leading to:  
+As the organization expanded, its data remained in a single flat file combining patient, hospital, doctor, and financial information. This created major limitations:
 
- Potential data duplication.  
+1. Data duplication and inconsistency
 
- Poor performance in Excel.  
+2. Poor performance in Excel
 
-Difficulty in monitoring patient outcomes and comparing efficiency across different hospitals.
+3. Limited ability to track KPIs and compare hospital performance
 
-# Aim of the Project
-The primary goals of this project are:Data Transformation: Convert raw operational data into a structured and normalized data model.  Scalability: Create a scalable model that facilitates easy tracking of Key Performance Indicators (KPIs).  Strategic Insights: Provide management with actionable insights to improve hospital performance and financial outcomes.
+# Objectives
+1. Transform raw healthcare data into a normalized, scalable model
 
-# Tools and Technology
-Power BI: Used for data modeling, DAX calculations, and visualization.  Power Query: Used for data cleaning and transformation.  DAX (Data Analysis Expressions): Used to create complex measures and KPIs.  Excel: Source of the initial raw operational data.
+2. Enable efficient tracking of operational and financial KPIs
 
-# Data Model Architecture
-The project involved normalizing the flat file into a Star Schema to optimize performance. The model consists of:  Fact Table: Contains transactional data such as Admission Dates, Costs (Treatment, Medication, Diagnostic), Revenue Billed, and Length of Stay.  Dimension Tables: * PatientDim: Patient details (Name, Gender, Age).  DoctorDim: Staff information and specialties.  HospitalDim: Hospital locations and country data.  DepartmentDim: Department names and IDs.  CalendarDim: For time-series analysis. 
+3. Provide actionable insights to improve hospital performance and patient outcomes
 
-# Key Measures & KPIs (DAX)
-To support business decisions, several DAX measures were developed:  
+# Tools & Technologies
+1. Power BI (data modeling and visualization)
 
-Total Admissions: Volume of patients handled.
+2. Power Query (data cleaning and transformation)
 
-Average Length of Stay: Efficiency of patient discharge.
+3. DAX (calculated measures and KPIs)
 
-Total Revenue & Net Income: Financial health analysis.
+# Excel (data source)
 
-Recovery Rate: Quality of care and patient outcomes.
+Data Model (Star Schema)
+The flat dataset was restructured into a star schema to improve performance and scalability.
 
-# Project Workflow
+Fact Table: Admissions, costs (treatment, medication, diagnostics), revenue, length of stay
 
-Data Acquisition: Downloaded and inspected the Excel healthcare dataset.  
+Dimension Tables:
+
+PatientDim (demographics)
+
+DoctorDim (staff and specialties)
+
+HospitalDim (locations and countries)
+
+DepartmentDim (clinical units)
+
+CalendarDim (time intelligence)
+
+# Key Measures (DAX)
+	Total Admissions
+"Total Admissions"=COUNT(FactAdmissions[PatientID])
+	Average Length of Stay
+"Avg LOS"=AVERAGE(FactAdmissions[LengthOfStayDays])
+	Total Revenue
+"Total Revenue"=SUM(FactAdmissions[RevenueBilled])
+	Net Income
+"Net Income"=SUM(FactAdmissions[RevenueBilled])-SUM(FactAdmissions[TotalExpenses])
+	Recovery Rate
+"Recovery Rate"=DIVIDE([RecoveredPatients],[TotalAdmissions])
 
 
-Data Modeling: Imported the file into Power BI and established relationships between fact and dimension tables.  
+# Dashboard Features
+Global view of hospital performance across 10 countries
+
+1. Drill-down by hospital, department, and specialty
+
+2. Time-series analysis of admissions and occupancy trends
+
+3. Cost and revenue breakdown by category
+
+4. Patient outcome tracking (Recovered, Referred, Ongoing, Deceased)
+
+# Key Insights & Business Impact
+1. Identified high patient volumes in key regions (UK, US, India), supporting targeted staffing and resource allocation
+
+2. Detected bottlenecks in Emergency and Cardiology departments, enabling data-driven workforce redistribution
+
+3. Highlighted high bed occupancy in Oncology and Neurology, informing infrastructure expansion decisions
+
+4. Revealed major cost drivers (medication vs diagnostics), supporting supplier negotiation strategies
+
+5. Tracked readmission patterns to identify ineffective treatments, improving clinical protocols
+
+6. Analyzed revenue vs cost gaps to identify the most financially sustainable specialties
 
 
-DAX Calculations: Created custom measures to track operational and financial performance.  
-
-
-Reporting: Developed an interactive dashboard to extract actionable insights for hospital management.
