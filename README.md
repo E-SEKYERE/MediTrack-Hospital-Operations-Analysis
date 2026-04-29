@@ -48,12 +48,16 @@ CalendarDim (time intelligence)
 # Key Measures (DAX)
 	Total Admissions
 "Total Admissions"=COUNT(FactAdmissions[PatientID])
+
 	Average Length of Stay
 "Avg LOS"=AVERAGE(FactAdmissions[LengthOfStayDays])
+
 	Total Revenue
 "Total Revenue"=SUM(FactAdmissions[RevenueBilled])
+
 	Net Income
 "Net Income"=SUM(FactAdmissions[RevenueBilled])-SUM(FactAdmissions[TotalExpenses])
+
 	Recovery Rate
 "Recovery Rate"=DIVIDE([RecoveredPatients],[TotalAdmissions])
 
