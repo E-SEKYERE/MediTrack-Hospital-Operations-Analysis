@@ -77,13 +77,14 @@ Global view of hospital performance across 10 countries
 1. Identified high patient volumes in key regions (UK, US, India), supporting targeted staffing and resource allocation
 
 2. Detected bottlenecks in Emergency and Cardiology departments, enabling data-driven workforce redistribution
+3. ![Dashboard](images/screenshot 2026-05-05 145951.png)
 
-3. Highlighted high bed occupancy in Oncology and Neurology, informing infrastructure expansion decisions
+4. Highlighted high bed occupancy in Oncology and Neurology, informing infrastructure expansion decisions
 
-4. Revealed major cost drivers (medication vs diagnostics), supporting supplier negotiation strategies
+5. Revealed major cost drivers (medication vs diagnostics), supporting supplier negotiation strategies
 
-5. Tracked readmission patterns to identify ineffective treatments, improving clinical protocols
+6. Tracked readmission patterns to identify ineffective treatments, improving clinical protocols
 
-6. Analyzed revenue vs cost gaps to identify the most financially sustainable specialties
+7. Analyzed revenue vs cost gaps to identify the most financially sustainable specialties
 
 
