@@ -86,4 +86,13 @@ Global view of hospital performance across 10 countries
 
 7. Analyzed revenue vs cost gaps to identify the most financially sustainable specialties
 
-![Dashboard](images/screenshot 2026-05-05 145951.png)
+<img width="1327" height="744" alt="Screenshot 2026-05-05 145951" src="https://github.com/user-attachments/assets/05a17d56-9750-403a-89a1-61c12937a75d" />
+
+<img width="1322" height="747" alt="Screenshot 2026-05-05 150023" src="https://github.com/user-attachments/assets/9bfb928e-b5e3-4557-96cf-e5cc680074a1" />
+
+<img width="1324" height="739" alt="Screenshot 2026-05-05 150049" src="https://github.com/user-attachments/assets/5a3c9e61-19ae-46ff-8977-0d35aa8d6e46" />
+
+
+
+
+
